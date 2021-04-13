@@ -1,0 +1,6 @@
+.Header {
+    display: grid;
+    position: relative;
+    background-color: bisque;
+    grid-area: h;
+}

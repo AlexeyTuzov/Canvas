@@ -1,0 +1,5 @@
+{
+    "port" : "4000",
+    "jwtKey" : "second MERN project",
+    "mongoURI" : "mongodb+srv://Admin:1234@db.s84ec.mongodb.net/CanvasDatabase?retryWrites=true&w=majority"
+}

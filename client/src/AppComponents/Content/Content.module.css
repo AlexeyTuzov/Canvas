@@ -1,0 +1,5 @@
+.Content {
+    position: relative;
+    background: linear-gradient(90deg, oldlace, bisque);
+    grid-area: c;
+}

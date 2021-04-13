@@ -1,0 +1,38 @@
+.Header {
+    position: relative;
+    background-color: bisque;
+    grid-area: h;
+}
+
+.Sidebar {
+    background:linear-gradient( 0deg, cornsilk,thistle);
+    grid-area: s;
+    position: relative;
+    height: inherit;
+}
+.MenuRef{
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.Content {
+    position: relative;
+    background: linear-gradient(90deg, oldlace, bisque);
+    grid-area: c;
+    
+}
+
+.Footer {
+    position: relative;
+    background-color: cornsilk;
+    grid-area: f;
+    text-align: center;
+    color:burlywood;
+}
+
+.Menu {
+    position: relative;
+    margin: 20px;
+    padding: 0;
+    height: inherit;
+}

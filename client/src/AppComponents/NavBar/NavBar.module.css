@@ -1,0 +1,5 @@
+.NavBar {
+    background: linear-gradient(0deg, cornsilk, thistle);
+    grid-area: n;
+    position: relative;
+}

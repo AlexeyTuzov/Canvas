@@ -1,0 +1,49 @@
+.AuthPage {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    background-color: bisque;
+}
+
+.Head {
+    position: relative;
+    text-align: center;
+    font-size: 1.5em;
+    color:darkgrey;
+    padding: 20px;
+}
+
+.ButtonBox {
+margin: 25px;
+}
+
+.Input {
+    margin-top: 20px;
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1.8em;
+}
+
+.ButtonReg {
+    margin-left: 60px;
+    margin-right: 150px;
+    box-shadow: black 2px 2px 5px;
+    transition-duration: 1s;
+}
+
+.ButtonReg:hover {
+    box-shadow: black 2px 2px;
+    transition-duration: 2s;
+}
+
+.ButtonSign {
+    box-shadow: black 2px 2px 5px;
+    transition-duration: 1s;
+}
+
+.ButtonSign:hover {
+    box-shadow: black 2px 2px;
+    transition-duration: 2s;
+}

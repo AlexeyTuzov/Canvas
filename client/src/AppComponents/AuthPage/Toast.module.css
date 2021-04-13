@@ -1,0 +1,40 @@
+.Toast {
+    opacity: 0;
+    visibility: visible;
+    display: block;
+    z-index: 2;
+    width: auto;
+    height: auto;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 75%;
+    margin-right: 3%;
+    background-color:darkslategray;
+    font-size: 1.3em;
+    padding: 10px;
+    border-radius: 15px;
+    color: whitesmoke;
+    animation-timing-function: ease-in-out;
+    animation-name: Fade;
+    animation-duration: 5s;
+}
+
+@keyframes Fade {
+    from {
+        opacity: 0;
+        transform: translateY(-25%);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    75% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-25%);
+    }
+}
+

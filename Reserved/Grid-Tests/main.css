@@ -1,0 +1,78 @@
+html{
+height: 100%;
+width: 100%;
+background-color: coral;
+}
+
+body {
+    margin: 0;
+    height: inherit;
+    width: inherit;
+}
+body .grid {
+    display: grid;
+    height: 100vh;
+    width: inherit;
+    position: absolute;
+    grid-template-areas: "a1 a2 a3 a4"
+                         "a5 a5 a6 a4"
+                         "a7 a7 a7 a4";
+
+}
+
+.item1 {
+display: grid;
+grid-area: a1;
+background-color: lavender;
+justify-content: center;
+align-content: center;
+
+}
+
+.item2 {
+display: grid;
+grid-area: a2;
+background-color:mediumturquoise;
+justify-content: center;
+align-content: center;
+}
+
+.item3 {
+display: grid;
+grid-area: a3;
+background-color: aliceblue;  
+justify-content: center;
+align-content: center;
+}
+
+.item4 {
+display: grid;
+grid-area: a4;
+background-color:blanchedalmond;  
+justify-content: center;
+align-content: center;
+}
+
+.item5 {
+display: grid;
+grid-area: a5;
+background-color:darkkhaki;
+justify-content: center;
+align-content: center;
+}
+
+.item6 {
+display: grid;
+grid-area: a6;
+background-color: goldenrod;
+justify-content: center;
+align-content: center;
+}
+
+.item7 {
+display: grid;
+grid-area: a7;
+background-color:orchid;
+justify-content: center;
+align-content: center;
+}
