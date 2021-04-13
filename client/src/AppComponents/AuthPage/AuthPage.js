@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import s from './AuthPage.module.css';
 import * as axios from 'axios';
 import Toast from './Toast.js';
+import  {useAuth} from './Auth.hook';
 
 const AuthPage = () => {
     const [emailInput, setEmailInput] = useState('');
@@ -9,8 +10,10 @@ const AuthPage = () => {
     const [submitProcess, setSubmitProcess] = useState(false);
     const [toastData, setToastData] = useState('');
 
+    const {login} = useAuth();
+
     const popup = (data => {
-        if (data.status) return <Toast {...data} />;
+        if (data.message) return <Toast {...data} />;
     });
 
     const SubmitClick = (type) => {
@@ -20,9 +23,13 @@ const AuthPage = () => {
         let payload = { email: emailInput, password: passwordInput };
         axios.post(`/api/auth/${type}`, payload)
             .then((res) => {
-                localStorage.setItem('UserID', res.data.UserID);
-                localStorage.setItem('token', res.data.token);
-                console.log('RESPONSE:', localStorage);
+                if (type === 'login') {
+                login(res.data.token, res.data.UserID);
+                }
+                else if (type === 'register') {
+                    setToastData('');
+                    setToastData({ message: res.data.message });
+                }
             })
             .catch((err) => {
                 let res = err.response;

@@ -9,9 +9,8 @@ import AuthPage from '../src/AppComponents/AuthPage/AuthPage.js';
 
 
 const App = () => {
-  let Authenticated = false;
 
-  if (Authenticated) {
+  if (localStorage.token) {
     return (
       <div className='App'>
         <Header />
