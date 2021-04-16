@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import s from './AuthPage.module.css';
 import * as axios from 'axios';
 import Toast from './Toast.js';
-import  {useAuth} from './Auth.hook';
+import { AuthContext } from '../context/AuthContext.js';
 
 const AuthPage = () => {
     const [emailInput, setEmailInput] = useState('');
@@ -10,7 +10,7 @@ const AuthPage = () => {
     const [submitProcess, setSubmitProcess] = useState(false);
     const [toastData, setToastData] = useState('');
 
-    const {login} = useAuth();
+    const { login } = useContext(AuthContext);
 
     const popup = (data => {
         if (data.message) return <Toast {...data} />;
