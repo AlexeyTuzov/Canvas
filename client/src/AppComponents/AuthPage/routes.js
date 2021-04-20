@@ -10,7 +10,6 @@ import { AuthContext} from '../context/AuthContext.js';
 export const Routes = () => {
 
   const { isAuthenticated } = useContext(AuthContext);
-  console.log('isAuthenticated in ROUTES:', isAuthenticated);
 
 if (isAuthenticated) {
     return (

@@ -8,7 +8,8 @@ import { useAuth } from './AppComponents/AuthPage/Auth.hook.js';
 
 const App = () => {
 
-const {login, logout, token, userID, isAuthenticated} = useAuth();
+const {login, logout, token, userID} = useAuth();
+const isAuthenticated = localStorage.token ? true : false;
 
   return (
     <AuthContext.Provider value = { { login, logout, token, userID, isAuthenticated } }>

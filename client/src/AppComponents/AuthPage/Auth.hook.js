@@ -4,7 +4,6 @@ export const useAuth = () => {
 
     const [token, setToken] = useState(null);
     const [userID, setUserID] = useState(null);
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     const login = (jwt, id) => {
         setToken(jwt);
@@ -12,8 +11,6 @@ export const useAuth = () => {
 
         localStorage.setItem('userID', id);
         localStorage.setItem('token', jwt);
-        setIsAuthenticated(true);
-        
     };
 
     const logout = () => {
@@ -24,5 +21,5 @@ export const useAuth = () => {
         localStorage.removeItem('userID', 'token');
     }
 
-    return { login, logout, token, userID, isAuthenticated }
+    return { login, logout, token, userID }
 }

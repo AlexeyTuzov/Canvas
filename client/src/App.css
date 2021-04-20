@@ -1,6 +1,5 @@
 .App {
     display: grid;
-    background-color: blueviolet;
     height: inherit;
     width: inherit;
     grid-template-areas: "h h"
