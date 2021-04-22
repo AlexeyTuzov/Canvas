@@ -1,6 +1,16 @@
 .Header {
-    display: grid;
+    display: flex;
     position: relative;
     background-color: bisque;
     grid-area: h;
+    flex-direction: row-reverse;
+}
+
+.LogoutButton {
+    vertical-align: center;
+    text-align: center;
+    width: 7%;
+    height: 60%;
+    font-size: 0.7em;
+    margin: 10px;
 }

@@ -1,15 +1,14 @@
 import React from 'react';
 import s from './NavBar.module.css';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { AppContext } from '../context/AppContext.js';
 
 const InputCoordinates = (props) => {
 
-    const [x, setX] = useState(null);
-    const [y, setY] = useState(null);
+    const { submitCoordinates } = useContext(AppContext);
 
-    const submitCoordinates = (x, y) => {
-        return [x, y];
-    }
+    const [x, setX] = useState('');
+    const [y, setY] = useState('');
 
     return (
         <div>

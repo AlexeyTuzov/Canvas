@@ -1,8 +1,11 @@
 import React from 'react';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useContext } from 'react';
 import s from './Canvas.module.css';
+import { AppContext } from '../../context/AppContext.js';
 
 const Canvas = () => {
+
+    const { coordinatesArray, drawArray } = useContext(AppContext);
 
     const CanvasRef = useRef(null);
 

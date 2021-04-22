@@ -20,3 +20,17 @@
     vertical-align: bottom;
 
 }
+
+.Coordinate {
+    color: darkslategray;
+    font-size: 1.2em;
+}
+
+.DeleteButton {
+ width: 170px;
+ height: 30px;
+ margin-top: 5px;
+ margin-left: 50%;
+ transform: translateX(-50%);
+ 
+}
