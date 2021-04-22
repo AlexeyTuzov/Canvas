@@ -9,12 +9,10 @@ import { AuthContext } from '../context/AuthContext.js';
 import { AppContext } from '../context/AppContext.js';
 import { useCanvas } from '../Content/Canvas/Canvas.hook.js';
 
-
 export const Routes = () => {
 
   const { isAuthenticated } = useContext(AuthContext);
   const { coordinatesArray, submitCoordinates, drawArray } = useCanvas();
-  console.log('isAuthenticated in routes.js:', isAuthenticated);
 
   if (isAuthenticated) {
     return (

@@ -11,6 +11,5 @@ export const useCanvas = () => {
         return;
     }
 
-
     return { coordinatesArray, submitCoordinates, drawArray }
 }
