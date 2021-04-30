@@ -7,9 +7,7 @@ const Toast = (props) => {
             <div>{props.statusText ? props.statusText : null}
              {props.status ? props.status : null}</div>
             <div>{props.message}</div>
-        </div>
-            
-        
+        </div>   
     )
 }
 

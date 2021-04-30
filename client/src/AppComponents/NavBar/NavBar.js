@@ -8,15 +8,18 @@ import { AppContext } from '../context/AppContext.js';
 
 const NavBar = () => {
 
-    const { coordinatesArray} = useContext(AppContext);
+    const { coordinatesArray, deleteAllCoordinates } = useContext(AppContext);
 
-    coordinatesArray.map(item => <Coordinate props={item} />);
-  
+    let coordinatesColumn = coordinatesArray.map( item => {
+        return <Coordinate {...item} />
+    });
 
     return (
         <div className={s.NavBar}>
             <InputCoordinates />
-            <button className = {s.DeleteButton}>
+            {coordinatesColumn}
+            <button className={s.DeleteButton}
+                onClick={() => deleteAllCoordinates()}>
                 Delete All Coordinates
             </button>
         </div>

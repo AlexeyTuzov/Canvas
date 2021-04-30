@@ -4,12 +4,15 @@ export const useCanvas = () => {
 
     const [coordinatesArray, setCoordinatesArray] = useState([]);
 
-    const submitCoordinates = (x, y) => setCoordinatesArray( prev => [...prev, {x, y}] );
+    const submitCoordinates = (x, y) => setCoordinatesArray(prev => [...prev, { x, y }]);
 
-    const drawArray = () => {
+    function drawArray(coordinatesArray) {
+        for (const [x, y] of coordinatesArray) {
 
-        return;
+        }
     }
 
-    return { coordinatesArray, submitCoordinates, drawArray }
+    const deleteAllCoordinates = () => setCoordinatesArray([]);
+    
+    return { coordinatesArray, submitCoordinates, drawArray, deleteAllCoordinates }
 }

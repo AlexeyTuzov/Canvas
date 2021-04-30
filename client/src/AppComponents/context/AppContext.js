@@ -6,5 +6,6 @@ export const AppContext = createContext( {
 coordinatesArray: [],
 deleteCoordinates: noop,
 submitCoordinates: noop,
-drawArray: noop
+drawArray: noop,
+deleteAllCoordinates: noop
 });

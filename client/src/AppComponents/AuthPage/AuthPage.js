@@ -12,9 +12,9 @@ const AuthPage = () => {
 
     const { login } = useContext(AuthContext);
 
-    const popup = (data => {
-        if (data.message) return <Toast {...data} />;
-    });
+    const popup = data => {
+        if (data.message) return <Toast {...data} />
+    }
 
     const SubmitClick = (type) => {
 

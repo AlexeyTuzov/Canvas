@@ -12,12 +12,12 @@ import { useCanvas } from '../Content/Canvas/Canvas.hook.js';
 export const Routes = () => {
 
   const { isAuthenticated } = useContext(AuthContext);
-  const { coordinatesArray, submitCoordinates, drawArray } = useCanvas();
+  const { coordinatesArray, submitCoordinates, drawArray, deleteAllCoordinates } = useCanvas();
 
   if (isAuthenticated) {
     return (
       <div className='App'>
-        <AppContext.Provider value={{ coordinatesArray, submitCoordinates, drawArray }}>
+        <AppContext.Provider value={{ coordinatesArray, submitCoordinates, drawArray, deleteAllCoordinates }}>
           <Header />
           <NavBar />
           <Content />
