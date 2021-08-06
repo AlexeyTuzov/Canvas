@@ -14,7 +14,7 @@ const {login, logout, token, userID, isAuthenticated} = useAuth();
     <AuthContext.Provider value = {{ login, logout, token, userID, isAuthenticated }}>
       <Routes />
     </AuthContext.Provider>
-  )
+  );
 
 }
 

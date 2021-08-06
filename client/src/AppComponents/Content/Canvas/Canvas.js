@@ -18,6 +18,7 @@ const Canvas = () => {
         const context = CanvasRef.current.getContext('2d');
         CanvasRef.current.width = DPI_WIDTH;
         CanvasRef.current.height = DPI_HEIGHT;
+        console.log('context,', context);
     
     }, []);
 

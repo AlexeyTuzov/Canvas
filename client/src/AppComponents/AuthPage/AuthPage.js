@@ -22,7 +22,7 @@ const AuthPage = () => {
 
         let payload = { email: emailInput, password: passwordInput };
         axios.post(`/api/auth/${type}`, payload)
-            .then((res) => {
+            .then( res => {
                 if (type === 'login') {
                 login(res.data.token, res.data.UserID);
                 }
@@ -31,7 +31,7 @@ const AuthPage = () => {
                     setToastData({ message: res.data.message });
                 }
             })
-            .catch((err) => {
+            .catch( err => {
                 let res = err.response;
                 setToastData('');
                 setToastData({
@@ -40,7 +40,7 @@ const AuthPage = () => {
                     message: res.data.message || res.data
                 });
             })
-            .finally(() => {
+            .finally( () => {
                 setSubmitProcess(false);
             });
 

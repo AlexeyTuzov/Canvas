@@ -24,9 +24,7 @@ const InputCoordinates = () => {
             setToastData('');
         } else {
             setToastData('');
-            console.log('toastData after shutdown', toastData);
             setToastData({ message: 'X or Y has no entree!' });
-            console.log('toastData after being set with message', toastData);
             
         }
     }

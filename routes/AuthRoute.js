@@ -55,7 +55,7 @@ router.post('/register',
         try {
             console.log('req taken', req.body);
             const errors = validationResult(req);
-            console.log('Vlidation result:', errors);
+            console.log('Validation result:', errors);
             if (!errors.isEmpty()) {
                 return res.status(400).json({
                     message: "Incorrect register data!"
